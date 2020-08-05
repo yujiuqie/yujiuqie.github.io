@@ -107,3 +107,9 @@ deploy:
   type: git
   repo: https://github.com/yujiuqie/yujiuqie.github.io.git
   branch: master
+
+excerpt:
+  depth: 5
+  excerpt_excludes: []
+  more_excludes: []
+  hideWholePostExcerpts: true

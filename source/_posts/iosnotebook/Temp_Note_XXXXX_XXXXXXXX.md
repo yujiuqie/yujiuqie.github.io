@@ -1,8 +1,11 @@
-### 变更记录
-
-| 序号 | 录入时间 | 录入人 | 备注 |
-|:--------:|:--------:|:--------:|:--------:|
-| 1 | 2017-01-06 | [Alfred Jiang](https://github.com/viktyz) | - |
+---
+title: "UIViewController - 旋转问题 willRotateToInterfaceOrientation 方法无法正常调用"
+date: 2000-00-00
+categories:
+- iOSNotebook
+tags:
+- xx
+---
 
 ### 方案名称
 
@@ -53,3 +56,9 @@ AppDelegate \ Launch
 
 Image_00200_00001
 Note_00200_20170106.md
+
+### 变更记录
+
+| 序号 | 录入时间 | 录入人 | 备注 |
+|:--------:|:--------:|:--------:|:--------:|
+| 1 | 2017-01-06 | [Alfred Jiang](https://github.com/viktyz) | - |
