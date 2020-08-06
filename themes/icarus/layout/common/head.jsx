@@ -106,7 +106,7 @@ module.exports = class extends Component {
 
         return <head>
             <meta charset="utf-8" />
-            {meta_generator ? <meta name="generator" content={`Hexo ${env.version}`} /> : null}
+            {meta_generator ? <meta name="generator" content={`Hexo`} /> : null}
             <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
             {meta && meta.length ? <MetaTags meta={meta} /> : null}
 
