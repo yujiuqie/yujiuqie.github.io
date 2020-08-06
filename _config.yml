@@ -94,6 +94,7 @@ pagination_dir: page
 ## include:/exclude: options only apply to the 'source/' folder
 include:
 exclude:
+- "**/Notes_Draft"
 ignore:
 - "**.py"
 - "**/Temp_Note_XXXXX_XXXXXXXX.md"
