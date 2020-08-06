@@ -97,6 +97,7 @@ exclude:
 ignore:
 - "**.py"
 - "**/Temp_Note_XXXXX_XXXXXXXX.md"
+- "**/Notes_Draft"
 
 # Extensions
 ## Plugins: https://hexo.io/plugins/
