@@ -65,28 +65,28 @@ def parse_file(filepath, filename):
         if len(str(line).strip('\n')) == 0:
             continue
 
-        if '### 方案名称' in line:
+        if '### 一、方案名称' in line:
             is_name_section = True
             is_tag_section = False
             is_session_section = False
 
             continue
 
-        if '### 关键字' in line:
+        if '### 二、关键字' in line:
             is_name_section = False
             is_tag_section = True
             is_session_section = False
 
             continue
 
-        if '### 需求场景' in line:
+        if '### 三、需求场景' in line:
             is_name_section = False
             is_tag_section = False
             is_session_section = True
 
             continue
 
-        if '### 参考链接' in line:
+        if '### 四、详细内容' in line:
             is_name_section = False
             is_tag_section = False
             is_session_section = False
@@ -111,20 +111,38 @@ def parse_file(filepath, filename):
     info['date'] = ''
 
 
-    # if len(name_string) > 0:
-    #     print(name_string+"\n"+fullpath)
-    #     with open(fullpath, "r+") as f:
-    #         old = f.read()
-    #         f.seek(0)
-    #         f.write("---\ntitle: \""+name_string+"\"\ndate: 2000-00-00\ncategories:\n- iOSNotebook\ntags:\n- xx\n---\n\n")
-    #         f.write(old)
+    # abbrlink
 
-    if len(tag_string) > 0:
-        tags = tag_string.split(" \ ")
-        for item in tags:
-            if item not in list:
-                print(item)
-                list.append(item)
+    abbrlink = filename.split(".")[0]
+
+    # 替换 header
+    if len(name_string) > 0:
+
+        #组装 tag
+
+        tagstring = ""
+
+        print(abbrlink)
+
+        if len(tag_string) > 0:
+            tags = tag_string.split(" \\ ")
+            for item in tags:
+                tagstring = tagstring + "- " + item + "\n" 
+
+        headstring = "---\ntitle: \""+name_string+"\"\ndate: \nabbrlink: " + abbrlink + "\ncategories:\n- iOSNotebook\ntags:\n" + tagstring + "---\n\n"
+
+        with open(fullpath, "r+") as f:
+            old = f.read()
+            f.seek(0)
+            f.write(headstring)
+            f.write(old)
+
+    # if len(tag_string) > 0:
+    #     tags = tag_string.split(" \\ ")
+    #     for item in tags:
+    #         if item not in list:
+    #             print(item)
+    #             list.append(item)
 
 #    list.append(info)
 
@@ -243,6 +261,7 @@ def cp_files_to_gitbook():
 def main():
     # 整理自定义笔记
     get_file_from_dir(current_file_dir(), parse_file)
+    print("finished")
 
 if __name__ == '__main__':
     main()

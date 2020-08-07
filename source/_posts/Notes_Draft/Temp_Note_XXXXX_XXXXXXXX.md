@@ -1,24 +1,27 @@
-### 变更记录
+---
+title: "iOSNotebook"
+date: 2015-6-25
+abbrlink: Temp_Note_XXXXX_XXXXXXXX
+categories:
+- iOSNotebook
+tags:
+---
 
-| 序号 | 录入时间 | 录入人 | 备注 |
-|:--------:|:--------:|:--------:|:--------:|
-| 1 | 2017-01-06 | [Alfred Jiang](https://github.com/viktyz) | - |
-
-### 方案名称
+### 一、方案名称
 
 AppDelegate - iOS APP Launch Options
 
-### 关键字
+### 二、关键字
 
 AppDelegate \ Launch
 
-### 需求场景
+### 三、需求场景
 
-### 参考链接
+### 四、参考链接
 
 1. [xxx](xxx)(推荐)
 
-### 详细内容
+### 五、详细内容
 
 ```
 .
@@ -45,11 +48,17 @@ AppDelegate \ Launch
 ```objective-c\xml\shell\python\java\php\html
 ```
 
-### 效果图
+### 六、效果图
 （无）
 
-### 备注
+### 七、备注
 （无）
 
 Image_00200_00001
 Note_00200_20170106.md
+
+### 八、变更记录
+
+| 序号 | 录入时间 | 录入人 | 备注 |
+|:--------:|:--------:|:--------:|:--------:|
+| 1 | 2017-01-06 | [Alfred Jiang](https://yujiuqie.github.io) | - |

@@ -117,46 +117,46 @@ search:
     type: insight
 # Comment plugin configurations
 # https://ppoffice.github.io/hexo-theme-icarus/categories/Plugins/Comment/
-comment:
-    type: disqus
-    # Disqus shortname
-    shortname: ''
+# comment:
+#     type: disqus
+#     # Disqus shortname
+#     shortname: ''
 # Donate plugin configurations
 # https://ppoffice.github.io/hexo-theme-icarus/categories/Plugins/Donation/
-donates:
-    # Alipay donate button configurations
-    -
-        type: alipay
-        # Alipay qrcode image URL
-        qrcode: ''
-    # "Buy me a coffee" donate button configurations
-    -
-        type: buymeacoffee
-        # URL to the "Buy me a coffee" page
-        url: ''
-    # Patreon donate button configurations
-    -
-        type: patreon
-        # URL to the Patreon page
-        url: ''
-    # Paypal donate button configurations
-    -
-        type: paypal
-        # Paypal business ID or email address
-        business: ''
-        # Currency code
-        currency_code: USD
-    # Wechat donate button configurations
-    -
-        type: wechat
-        # Wechat qrcode image URL
-        qrcode: ''
+# donates:
+#     # Alipay donate button configurations
+#     -
+#         type: alipay
+#         # Alipay qrcode image URL
+#         qrcode: ''
+#     # "Buy me a coffee" donate button configurations
+#     -
+#         type: buymeacoffee
+#         # URL to the "Buy me a coffee" page
+#         url: ''
+#     # Patreon donate button configurations
+#     -
+#         type: patreon
+#         # URL to the Patreon page
+#         url: ''
+#     # Paypal donate button configurations
+#     -
+#         type: paypal
+#         # Paypal business ID or email address
+#         business: ''
+#         # Currency code
+#         currency_code: USD
+#     # Wechat donate button configurations
+#     -
+#         type: wechat
+#         # Wechat qrcode image URL
+#         qrcode: ''
 # Share plugin configurations
 # https://ppoffice.github.io/hexo-theme-icarus/categories/Plugins/Share/
-share:
-    type: sharethis
-    # URL to the ShareThis share plugin script
-    install_url: ''
+# share:
+#     type: sharethis
+#     # URL to the ShareThis share plugin script
+#     install_url: ''
 # Sidebar configurations.
 # Please be noted that a sidebar is only visible when it has at least one widget
 sidebar:
@@ -177,11 +177,11 @@ widgets:
         position: left
         type: profile
         # Author name
-        author: Your name
+        author: Alfred Jiang
         # Author title
-        author_title: Your title
+        author_title: The world we see with our senses is very different than the world we see through our essence.
         # Author's current location
-        location: Your location
+        location: Shanghai,China
         # URL or path to the avatar image
         avatar: 
         # Whether show the rounded avatar image
@@ -189,12 +189,12 @@ widgets:
         # Email address for the Gravatar
         gravatar: 
         # URL or path for the follow button
-        follow_link: 'https://github.com/ppoffice'
+        follow_link: 'https://github.com/yujiuqie'
         # Links to be shown on the bottom of the profile widget
         social_links:
             Github:
                 icon: fab fa-github
-                url: 'https://github.com/ppoffice'
+                url: 'https://github.com/yujiuqie'
             Facebook:
                 icon: fab fa-facebook
                 url: 'https://facebook.com'
@@ -251,14 +251,14 @@ widgets:
         # Feedburner ID
         feedburner_id: ''
     # Google AdSense unit configurations
-    -
-        # Where should the widget be placed, left sidebar or right sidebar
-        position: left
-        type: adsense
-        # AdSense client ID
-        client_id: ''
-        # AdSense AD unit ID
-        slot_id: ''
+    # -
+    #     # Where should the widget be placed, left sidebar or right sidebar
+    #     position: left
+    #     type: adsense
+    #     # AdSense client ID
+    #     client_id: ''
+    #     # AdSense AD unit ID
+    #     slot_id: ''
 # Plugin configurations
 # https://ppoffice.github.io/hexo-theme-icarus/categories/Plugins/
 plugins:
@@ -278,9 +278,9 @@ plugins:
     # https://www.umeng.com/web
     cnzz:
         # CNZZ tracker id
-        id: 
+        id: 1279155120
         # CNZZ website id
-        web_id: 
+        web_id: 1279155120
     # Enable the lightGallery and Justified Gallery plugins
     gallery: true
     # Google Analytics plugin settings

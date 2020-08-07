@@ -99,6 +99,7 @@ ignore:
 - "**.py"
 - "**/Temp_Note_XXXXX_XXXXXXXX.md"
 - "**/Notes_Draft"
+- "**/blogfullmap.md"
 
 # Extensions
 ## Plugins: https://hexo.io/plugins/
