@@ -110,7 +110,7 @@ theme: icarus
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: git@github.com:yujiuqie/yujiuqie.github.io.git
+  repo: https://github.com/yujiuqie/yujiuqie.github.io.git
   branch: gh-pages
   token: 'b26914d4d2782e44550f57aff45aeac5cb25d8e4'
   name: yujiuqie
