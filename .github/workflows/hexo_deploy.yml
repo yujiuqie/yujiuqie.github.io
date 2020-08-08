@@ -28,7 +28,7 @@ jobs:
     - name: Run a one-line script
       run: echo Hello, world!
 
- - name: Deploy
+    - name: Deploy
       id: deploy
       uses: sma11black/hexo-action@v1.0.2
       with:
