@@ -50,7 +50,6 @@ jobs:
         user_email: yujiuqie@163.com  # (or delete this input setting to use bot account)
         commit_msg: ${{ github.event.head_commit.message }}  # (or delete this input setting to use hexo default settings)
 
-    # Runs a set of commands using the runners shell
-    - name: Run a multi-line script
+    - name: Get the output
       run: |
-        run deploy
+        echo "${{ steps.deploy.outputs.notify }}"
