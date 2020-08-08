@@ -64,14 +64,14 @@ def parse_file(filepath, filename):
             continue
             
         if is_update_searched == True and is_title_searched == False:
-            if line != '\n' and line != '### 一、方案名称':
+            if line != '\n' and line != '### 一、方案名称\n':
                 revise_string = revise_string + line
 
         if '### 八、变更记录' in line:
             is_update_searched = True
             
             if is_title_searched == False:
-                revise_string = revise_string + line
+                revise_string = revise_string + line + '\n'
                 continue
             else:
                 break
@@ -86,15 +86,21 @@ def parse_file(filepath, filename):
             else:
                 break
 
+    file.close()
 
     if len(revise_string) > 0:
-
-        footstring = "\n"+revise_string
+    
+        replace_string = "\n" + revise_string
+        file_new = open(fullpath, "r")
+        file_content = file_new.read()
+        result = file_content.replace(revise_string,"")
+        result = result + "\n" + replace_string
         
-        print(revise_string)
-
-#        with open(fullpath, "a+") as f:
-#            f.write(revise_string)
+        with open(fullpath,"w") as f1:
+            f1.write(result)
+        
+    else:
+        print("Need not replace : " + filename)
 
 
 
