@@ -111,7 +111,7 @@ theme: icarus
 deploy:
   type: git
   repo: https://x-access-token:1326fcddab68020665834888c5a6bf5aab6a5830@github.com/yujiuqie/yujiuqie.github.io.git
-  branch: master
+  branch: gh-pages
 
 excerpt:
   depth: 5
