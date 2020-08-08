@@ -86,15 +86,22 @@ def parse_file(filepath, filename):
             else:
                 break
 
+    file.close()
 
     if len(revise_string) > 0:
+    
+        footstring = "\n" + revise_string
+        file_new = open(fullpath, 'r')
+        file_content = file_new.read()
+        file_content.replace(footstring,"")
+        file_new.close()
 
-        footstring = "\n"+revise_string
-        
-        print(revise_string)
+        with open(fullpath, "a+") as f:
+            print(revise_string)
+            f.write(revise_string)
 
-#        with open(fullpath, "a+") as f:
-#            f.write(revise_string)
+    else:
+        print("Need not replace : " + filename)
 
 
 
