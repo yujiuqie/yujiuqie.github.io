@@ -1,0 +1,105 @@
+# coding=utf-8
+
+# Created by Alfred Jiang 20150514
+
+
+import json
+import os
+import sys
+
+if sys.version < '3':
+    reload(sys)
+    sys.setdefaultencoding( "utf-8" )
+
+
+iosnotebook_project_url = "https://github.com/viktyz/iosnotebook/blob/master/"
+
+list = []
+
+
+# 获取脚本文件的当前路径
+def current_file_dir():
+    path = sys.path[0]
+
+    if os.path.isdir(path):
+
+        return path
+
+    elif os.path.isfile(path):
+        return os.path.dirname(path)
+
+
+def parse_file(filepath, filename):
+    url_string = iosnotebook_project_url
+
+    if str(filename).startswith('Note_'):
+
+        url_string = url_string + 'Notes/' + filename
+
+    elif str(filename).startswith('JavaScript_'):
+
+        url_string = url_string + 'JavaScript/' + filename
+
+    elif str(filename).startswith('Python_'):
+
+        url_string = url_string + 'Python/' + filename
+
+    else:
+
+        return
+
+    fullpath = filepath + '/' + filename
+
+    file = open(fullpath, 'r')
+
+    is_name_section = False
+
+    name_string = ''
+
+    for linenum, line in enumerate(file.readlines()):
+
+        if len(str(line).strip('\n')) == 0:
+            continue
+
+        if '### 一、方案名称' in line:
+            is_name_section = True
+
+            continue
+
+        if '### 二、关键字' in line:
+            is_name_section = False
+            break
+
+        if is_name_section == True and len(str(line).strip('\n')) != 0:
+            name_string = name_string + str(line).strip('\n')
+            break
+
+    abbrlink = filename.split(".")[0]
+
+    if abbrlink != "Note_00000_20150625":
+        list.append((name_string,abbrlink))
+
+# 按第一个元素排序
+def takeFirst(element):
+    return element[0]
+
+# 主函数
+def main():
+    # 整理自定义笔记
+
+    dir = current_file_dir()
+
+    dir = dir.replace("Notes_Draft","iosnotebook")
+
+    for root, dirs, files in os.walk(dir):
+
+        for item in files:
+            parse_file(root,item)
+    
+    list.sort(key=takeFirst)
+
+    for item in list:
+        print("* ["+ item[0] +"]("+ item[1] +".html)")
+
+if __name__ == '__main__':
+    main()
