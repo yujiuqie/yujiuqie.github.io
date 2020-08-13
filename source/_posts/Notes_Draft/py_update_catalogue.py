@@ -96,6 +96,8 @@ def main():
 
     introduce = dir + "/Note_00000_Introduce.md"
 
+    print("开始读取介绍信息...")
+
     with open(introduce, "r+") as f:
       contents = f.read() 
 
@@ -103,11 +105,13 @@ def main():
 
     dir = dir.replace("Notes_Draft","iosnotebook")
 
+    print("开始读取目录信息...")
     for root, dirs, files in os.walk(dir):
 
         for item in files:
             parse_file(root,item)
     
+    print("开始生成目录...")
     list.sort(key=takeFirst)
 
     for item in list:
@@ -115,7 +119,10 @@ def main():
 
     path = dir + "/Note_00000_20150625.md"
 
+    print("开始写入目录...")
     writeCatalogue(contents,path)
+
+    print("目录更新完成！")
 
 if __name__ == '__main__':
     main()
