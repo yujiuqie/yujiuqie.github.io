@@ -83,11 +83,23 @@ def parse_file(filepath, filename):
 def takeFirst(element):
     return element[0]
 
+def writeCatalogue(contents,filename):
+
+    with open(filename, "w") as f:
+        f.write(contents)
+
 # 主函数
 def main():
     # 整理自定义笔记
 
     dir = current_file_dir()
+
+    introduce = dir + "/Note_00000_Introduce.md"
+
+    with open(introduce, "r+") as f:
+      contents = f.read() 
+
+    contents = contents + "\n"
 
     dir = dir.replace("Notes_Draft","iosnotebook")
 
@@ -99,7 +111,11 @@ def main():
     list.sort(key=takeFirst)
 
     for item in list:
-        print("* ["+ item[0] +"]("+ item[1] +".html)")
+        contents = contents + "* ["+ item[0] +"]("+ item[1] +".html)\n"
+
+    path = dir + "/Note_00000_20150625.md"
+
+    writeCatalogue(contents,path)
 
 if __name__ == '__main__':
     main()
