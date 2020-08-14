@@ -114,8 +114,10 @@ def main():
     print("开始生成目录...")
     list.sort(key=takeFirst)
 
+    index = 0
     for item in list:
-        contents = contents + "* ["+ item[0] +"]("+ item[1] +".html)\n"
+        index = index + 1
+        contents = contents + str(index) + ". ["+ item[0] +"]("+ item[1] +".html)\n"
 
     path = dir + "/Note_00000_20150625.md"
 
