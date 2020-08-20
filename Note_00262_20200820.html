@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="generator" content="Hexo"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>专题 - iOS 性能优化及监测 - Alfred</title><meta description="一、方案名称专题 - iOS 性能优化及监测 二、关键字专题 \ 性能 \ 优化 \ 监测 三、需求场景"><meta property="og:type" content="blog"><meta property="og:title" content="专题 - iOS 性能优化及监测"><meta property="og:url" content="http://yoursite.com/Note_00262_20200820.html"><meta property="og:site_name" content="Alfred"><meta property="og:description" content="一、方案名称专题 - iOS 性能优化及监测 二、关键字专题 \ 性能 \ 优化 \ 监测 三、需求场景"><meta property="og:locale" content="en_US"><meta property="og:image" content="http://yoursite.com/img/og_image.png"><meta property="article:published_time" content="2018-08-20T00:00:00.000Z"><meta property="article:modified_time" content="2020-08-20T06:53:56.849Z"><meta property="article:author" content="Alfred Jiang"><meta property="article:tag" content="专题"><meta property="article:tag" content="性能"><meta property="article:tag" content="优化"><meta property="article:tag" content="监测"><meta property="twitter:card" content="summary"><meta property="twitter:image" content="/img/og_image.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://yoursite.com/Note_00262_20200820.html"},"headline":"Alfred","image":["http://yoursite.com/img/og_image.png"],"datePublished":"2018-08-20T00:00:00.000Z","dateModified":"2020-08-20T06:53:56.849Z","author":{"@type":"Person","name":"Alfred Jiang"},"description":"一、方案名称专题 - iOS 性能优化及监测 二、关键字专题 \\ 性能 \\ 优化 \\ 监测 三、需求场景"}</script><link rel="canonical" href="http://yoursite.com/Note_00262_20200820.html"><link rel="icon" href="/img/favicon.svg"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/css/justifiedGallery.min.css"><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script></head><body class="is-2-column"><nav class="navbar navbar-main"><div class="container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/img/logo.svg" alt="Alfred" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a><a class="navbar-item search" title="Search" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-9-desktop is-9-widescreen"><div class="card"><article class="card-content article" role="article"><div class="article-meta size-small is-uppercase level is-mobile"><div class="level-left"><time class="level-item" dateTime="2018-08-20T00:00:00.000Z" title="2018-08-20T00:00:00.000Z">2018-08-20</time><span class="level-item"><a class="link-muted" href="/categories/iOSNotebook/">iOSNotebook</a></span><span class="level-item">16 minutes read (About 2350 words)</span></div></div><h1 class="title is-3 is-size-4-mobile">专题 - iOS 性能优化及监测</h1><div class="content"><h3 id="一、方案名称"><a href="#一、方案名称" class="headerlink" title="一、方案名称"></a>一、方案名称</h3><p>专题 - iOS 性能优化及监测</p>
+<h3 id="二、关键字"><a href="#二、关键字" class="headerlink" title="二、关键字"></a>二、关键字</h3><p>专题 \ 性能 \ 优化 \ 监测</p>
+<h3 id="三、需求场景"><a href="#三、需求场景" class="headerlink" title="三、需求场景"></a>三、需求场景</h3><ul>
+<li>需要对 APP 进行性能优化和监测时</li>
+</ul>
+<h3 id="四、参考链接"><a href="#四、参考链接" class="headerlink" title="四、参考链接"></a>四、参考链接</h3><ol>
+<li><a href="https://github.com/skyming/iOS-Performance-Optimization">GitHub - skyming/iOS-Performance-Optimization</a>(推荐)</li>
+<li><a href="https://juejin.im/post/6861976679586201614">掘金-iOS包体积优化实战-无脑瘦身篇</a></li>
+</ol>
+<h3 id="五、详细内容"><a href="#五、详细内容" class="headerlink" title="五、详细内容"></a>五、详细内容</h3><p>关于iOS 性能优化梳理：<br>基本工具、业务优化、内存优化、卡顿优化、布局优化、电量优化、 安装包瘦身、启动优化、网络优化等</p>
+<h4 id="iOS-官方文档"><a href="#iOS-官方文档" class="headerlink" title="iOS 官方文档"></a>iOS 官方文档</h4><blockquote>
+<p>专题内容比较多，后面细分内容会有部分重复。</p>
+</blockquote>
+<ul>
+<li><a href="https://developer.apple.com/library/content/navigation/#section=Topics&topic=Performance">Performance 专题</a> </li>
+<li><a href="https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/CoreAnimation_guide">Core Animation Programming Guide</a> </li>
+</ul>
+<h4 id="iOS-性能优化相关书籍"><a href="#iOS-性能优化相关书籍" class="headerlink" title="iOS 性能优化相关书籍"></a>iOS 性能优化相关书籍</h4><ul>
+<li><a href="http://download.csdn.net/detail/tskyming/9831453">Pro iOS Apps Performance Optimization</a></li>
+<li><a href="http://download.csdn.net/detail/tskyming/9831465">High Performance iOS Apps</a></li>
+<li><a href="https://github.com/AttackOnDobby/iOS-Core-Animation-Advanced-Techniques">iOS-Core-Animation-Advanced-Techniques</a></li>
+</ul>
+<h4 id="Instruments-工具相关"><a href="#Instruments-工具相关" class="headerlink" title="Instruments 工具相关"></a>Instruments 工具相关</h4><ul>
+<li><a href="https://developer.apple.com/library/content/documentation/DeveloperTools/Conceptual/InstrumentsUserGuide/index.html">Instruments User Guide</a> <a href="http://cdn.cocimg.com/bbs/attachment/Fid_6/6_24457_90eabb4ed5b3863.pdf">中文翻译-PDF</a> </li>
+<li><a href="http://www.cnblogs.com/lxlx1798/p/6933485.html">Instruments之Leaks学习</a> </li>
+<li><a href="http://www.cnblogs.com/lxlx1798/p/6933195.html">Instruments学习之Allocations</a> </li>
+<li><a href="http://www.cnblogs.com/lxlx1798/p/6933604.html">instrument之Time Profiler总结</a></li>
+<li><a href="http://www.cnblogs.com/lxlx1798/p/6933364.html">Instruments学习之Core Animation学习</a> </li>
+<li><a href="http://www.cnblogs.com/lxlx1798/p/6933141.html">Instruments之Activity Monitor使用入门</a> </li>
+</ul>
+<h4 id="GMTC-2018-PPT"><a href="#GMTC-2018-PPT" class="headerlink" title="GMTC-2018 PPT"></a>GMTC-2018 PPT</h4><ul>
+<li><a href="https://ppt.geekbang.org/slide/show?cid=31&pid=1495">LinkedIn移动应用的性能优化之道</a></li>
+<li><a href="https://ppt.geekbang.org/slide/show?cid=31&pid=1500">美团客户端监控与异常排查实践</a></li>
+<li><a href="https://ppt.geekbang.org/slide/show?cid=31&pid=1497">爱奇艺APP极致体验之路</a></li>
+<li><a href="https://ppt.geekbang.org/slide/show?cid=31&pid=1496">大前端时代前端监控的最佳实践</a></li>
+<li><a href="https://gmtc.infoq.cn/2019/beijing/">性能优化与监控专题PPT</a></li>
+</ul>
+<h4 id="综合篇"><a href="#综合篇" class="headerlink" title="综合篇"></a>综合篇</h4><ul>
+<li><a href="https://developer.apple.com/videos/play/wwdc2012/235">WWDC2012-235-iOS APP Performance:Responsiveness</a></li>
+<li><a href="http://wereadteam.github.io/2016/05/03/WeRead-Performance/">微信读书iOS性能优化</a></li>
+<li><a href="http://wereadteam.github.io/2016/12/12/Monitor/">微信读书 iOS 质量保证及性能监控</a></li>
+<li><a href="https://ming1016.github.io/2017/06/20/deeply-ios-performance-optimization/">深入剖析 iOS 性能优化</a></li>
+<li><a href="http://blog.csdn.net/magicwindow/article/details/51423463">魔窗研发副总裁沈哲：移动端SDK的优化之路</a></li>
+<li><a href="http://www.cocoachina.com/design/20160905/17483.html">搜狗输入法 iOS 版开发与优化实践</a><a href="https://github.com/MDCC2016/iOS-Session-Slides/blob/master/%E6%90%9C%E7%8B%97%E8%BE%93%E5%85%A5%E6%B3%95%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96%E5%AE%9E%E8%B7%B5-%E6%9D%8E%E8%85%BE%E6%9D%B0.pdf">PPT</a></li>
+<li><a href="http://www.infoq.com/cn/presentations/stability-and-performance-of-mogujie-app">蘑菇街 App 的稳定性与性能实践</a><a href="https://sanwen8.cn/p/6e5c888.html">PPT</a></li>
+<li><a href="http://pstatic.geekbang.org/pdf/593a53d813cef.pdf?e=1497499485&token=eHNJKRTldoRsUX0uCP9M3icEhpbyh3VF9Nrk5UPM:sa-xp_aIeIhtiWbqR-hY4ImMzFc=">⼿淘iOS性能优化探索</a></li>
+<li><a href="https://juejin.im/post/58ca0832a22b9d006418fe43">iOS App 稳定性指标及监测</a></li>
+</ul>
+<h4 id="内存优化"><a href="#内存优化" class="headerlink" title="内存优化"></a>内存优化</h4><ul>
+<li><a href="https://developer.apple.com/library/content/documentation/Performance/Conceptual/ManagingMemory/ManagingMemory.html#//apple_ref/doc/uid/10000160i">Memory Usage Performance Guidelines</a> </li>
+<li><a href="https://developer.apple.com/videos/play/wwdc2018/416/">WWDC-2018-416</a><a href="https://juejin.im/post/5b23dafee51d4558e03cbf4f">中文翻译</a></li>
+<li><a href="https://juejin.im/post/5a5e13c45188257327399e19">探索iOS内存分配</a> </li>
+<li><a href="http://wetest.qq.com/lab/view/367.html?from=content_juejin">iOS微信内存监控</a></li>
+<li><a href="https://www.imooc.com/video/11075">内存管理及优化(上)-QQ浏览器</a></li>
+<li><a href="https://www.imooc.com/video/11076">内存管理及优化(下)-QQ浏览器</a></li>
+<li><a href="https://www.jianshu.com/p/4458700a8ba8">OOM探究：XNU 内存状态管理</a></li>
+</ul>
+<h4 id="卡顿优化"><a href="#卡顿优化" class="headerlink" title="卡顿优化"></a>卡顿优化</h4><ul>
+<li><a href="http://www.cocoachina.com/ios/20160208/15238.html?utm_source=tuicool&utm_medium=referral">UIKit性能调优实战讲解</a></li>
+<li><a href="http://wetest.qq.com/lab/view/354.html">QQ空间掉帧率优化实战</a></li>
+<li><a href="https://mp.weixin.qq.com/s?__biz=MzA4MzEwOTkyMQ==&mid=2667379069&idx=1&sn=376d9ef2261cf13e930406f1c35d3569">实现 60fps 的网易云音乐首页</a> </li>
+<li><a href="http://blog.ibireme.com/2015/11/12/smooth_user_interfaces_for_ios/">iOS 保持界面流畅的技巧</a></li>
+<li><a href="http://www.cocoachina.com/ios/20180412/22990.html">iOS UI性能优化总结</a></li>
+<li><a href="http://mp.weixin.qq.com/s?__biz=MzAwNDY1ODY2OQ==&idx=1&mid=207890859&scene=23&sn=e98dd604cdb854e7a5808d2072c29162&srcid=0921FzoCw9j1W7n4uFYKuarC#rd">微信iOS卡顿监控系统</a></li>
+<li><a href="http://www.cnblogs.com/gatsbywang/p/5555200.html">iOS-卡顿检测</a></li>
+<li><a href="http://ios.jobbole.com/93085/">iOS监控：卡顿检测</a></li>
+<li><a href="https://mp.weixin.qq.com/s?__biz=MzI5MjEzNzA1MA==&mid=2650264136&idx=1&sn=052c1db8131d4bed8458b98e1ec0d5b0&chksm=f406837dc3710a6b49e76ce3639f671373b553e8a91b544e82bb8747e9adc7985fea1093a394#rd">iOS应用UI线程卡顿监控</a></li>
+</ul>
+<h4 id="布局优化"><a href="#布局优化" class="headerlink" title="布局优化"></a>布局优化</h4><p>TODO::</p>
+<h4 id="电量优化"><a href="#电量优化" class="headerlink" title="电量优化"></a>电量优化</h4><ul>
+<li><a href="https://developer.apple.com/library/content/documentation/Performance/Conceptual/EnergyGuide-iOS/index.html#//apple_ref/doc/uid/TP40015243">Guide - Energy Efficiency Guide for iOS Apps</a></li>
+<li><a href="https://developer.apple.com/videos/play/wwdc2017/238/">WWDC2017 - Writing Energy Efficient Apps</a></li>
+<li><a href="https://github.com/ChenYilong/iOSBlog/issues/10">iOS 常见耗电量检测方案调研</a></li>
+<li><a href="http://www.jianshu.com/p/f0dc653d04ca">教你开发省电的 iOS app（WWDC17 观后）</a></li>
+<li><a href="https://juejin.im/post/5a0c5af051882578da0d6925">浅析移动蜂窝网络的特点及其省电方案</a></li>
+<li><a href="https://mp.weixin.qq.com/s/q39BHIWsbdNeqfH85EOkIQ">iOS电量测试实践</a></li>
+<li><a href="http://www.cocoachina.com/ios/20171204/21413.html">iOS进阶–App功耗优化看这篇就够了</a></li>
+</ul>
+<h4 id="启动优化"><a href="#启动优化" class="headerlink" title="启动优化"></a>启动优化</h4><ul>
+<li><a href="https://developer.apple.com/videos/play/wwdc2016/406">WWDC2016-406-Optimizing App Startup Time</a></li>
+<li><a href="https://developer.apple.com/videos/play/wwdc2017/413">WWDC2017-413-App Startup Time:Past,Present,and Future</a></li>
+<li><a href="https://www.jianshu.com/p/c14987eee107">如何精准度量iOSAPP启动时间</a></li>
+<li><a href="http://yulingtianxia.com/blog/2016/10/30/Optimizing-App-Startup-Time">优化 App 的启动时间-杨萧玉</a></li>
+<li><a href="https://techblog.toutiao.com/2017/01/17/iosspeed/#more">iOS客户端启动速度优化-今日头条</a></li>
+<li><a href="https://mp.weixin.qq.com/s/Kf3EbDIUuf0aWVT-UCEmbA">iOS App 启动性能优化-WiFi管家</a></li>
+<li><a href="http://www.cocoachina.com/ios/20160104/14870.html">iOS App如何优化启动时间-Facebook</a></li>
+<li><a href="http://www.infoq.com/cn/presentations/ios-typewriting-start-speed-optimization">iOS 启动速度优化-百度输入法</a></li>
+<li><a href="https://juejin.im/post/5a31190751882559e225a775">一次立竿见影的启动时间优化</a></li>
+<li><a href="https://objccn.io/issue-6-3/">obj中国-Mach-O 可执行文件</a></li>
+<li><a href="https://zhuanlan.zhihu.com/p/38183046?from=1086193010&wm=3333_2001&weiboauthoruid=1690182120">iOS app启动速度研究实践</a></li>
+<li><a href="https://mp.weixin.qq.com/s/jN3jaNrvXczZoYIRCWZs7w">iOS App冷启动治理：来自美团外卖的实践</a></li>
+</ul>
+<h4 id="体积优化（包大小优化）"><a href="#体积优化（包大小优化）" class="headerlink" title="体积优化（包大小优化）"></a>体积优化（包大小优化）</h4><ul>
+<li><a href="http://mp.weixin.qq.com/s?__biz=MzAwNDY1ODY2OQ==&mid=207986417&idx=1&sn=77ea7d8e4f8ab7b59111e78c86ccfe66&scene=24&srcid=0921TTAXHGHWKqckEHTvGzoA#rd">iOS微信安装包瘦身</a></li>
+<li><a href="https://techblog.toutiao.com/2016/12/27/iphone/">今日头条IPA安装包的优化</a></li>
+<li><a href="http://www.infoq.com/cn/articles/ios-thinning-delete-unnecessary-mach-o">iOS瘦身之删除FrameWork中无用mach-O文件</a></li>
+<li><a href="http://www.infoq.com/cn/articles/clang-plugin-ios-app-size-reducing">基于clang插件的一种iOS包大小瘦身方案</a></li>
+<li><a href="http://blog.cnbang.net/tech/2544/">iOS可执行文件瘦身方法</a></li>
+<li><a href="http://crespoxiao.github.io/2016/11/12/iOS%E5%9B%BE%E7%89%87%E4%BC%98%E5%8C%96%E6%96%B9%E6%A1%88/">iOS图片优化方案</a></li>
+<li><a href="https://ming1016.github.io/2017/06/12/gmtc-ios-slimming-practice/">滴滴出行 iOS 端瘦身实践的 Slides</a></li>
+<li><a href="https://juejin.im/post/6861976679586201614">掘金-iOS包体积优化实战-无脑瘦身篇</a></li>
+</ul>
+<h4 id="网络优化"><a href="#网络优化" class="headerlink" title="网络优化"></a>网络优化</h4><ul>
+<li><a href="http://tech.meituan.com/SharkSDK.html">美团点评移动网络优化实践</a></li>
+<li><a href="http://mp.weixin.qq.com/s?__biz=MzAwMDU1MTE1OQ==&mid=209805123&idx=1&sn=ced8d67c3e2cc3ca38ef722949fa21f8">开源版HttpDNS方案详解</a></li>
+<li><a href="http://www.infoq.com/cn/articles/how-ctrip-improves-app-networking-performance">携程App的网络性能优化实践</a></li>
+<li><a href="http://www.infoq.com/cn/articles/app-network-service-and-performance-optimization-of-ctrip">2016年携程App网络服务通道治理和性能优化实践</a></li>
+<li><a href="http://www.infoq.com/cn/articles/mogujie-app-chromium-network-layer">蘑菇街App Chromium网络栈实践</a></li>
+<li><a href="http://www.infoq.com/cn/presentations/mogujie-high-concurrent-multi-terminal-wireless-gateway-practice">蘑菇街高并发多终端无线网关实践</a></li>
+<li><a href="http://blog.cnbang.net/tech/3531/?hmsr=toutiao.io&utm_medium=toutiao.io&utm_source=toutiao.io">移动 APP 网络优化概述</a></li>
+</ul>
+<h4 id="编译优化"><a href="#编译优化" class="headerlink" title="编译优化"></a>编译优化</h4><ul>
+<li><a href="https://github.com/fastred/Optimizing-Swift-Build-Times">Optimizing-Swift-Build-Times</a></li>
+</ul>
+<h4 id="APM"><a href="#APM" class="headerlink" title="APM"></a>APM</h4><ul>
+<li><a href="http://ios.jobbole.com/92988/">移动端监控体系之技术原理剖析</a></li>
+<li><a href="http://mp.weixin.qq.com/s?__biz=MzA3ODg4MDk0Ng==&mid=2651112215&idx=1&sn=9cc5b5fa630542a6d4b7a5626e35217a#rd">网易 - NeteaseAPM iOS SDK技术实现分享</a></li>
+<li><a href="http://www.jianshu.com/p/69ce01e15042">网易乐得 - iOS无埋点数据SDK实践之路</a> </li>
+<li><a href="http://www.infoq.com/cn/presentations/mobile-terminal-apm-product-development-skills">听云 - 移动端 APM 产品研发技能</a> </li>
+<li><a href="http://www.infoq.com/cn/presentations/mobile-app-performance-monitoring-practice?utm_source=presentations_about_mobile&utm_medium=link&utm_campaign=mobile">听云 - 移动 App 性能监测</a></li>
+<li><a href="https://github.com/aozhimin/iOS-Monitor-Platform">iOS 性能监控 SDK —— Wedjat（华狄特）开发过程的调研和整理</a></li>
+<li><a href="https://github.com/iOS-APM/iOS-APM-Secrets">揭秘 APM iOS SDK 的核心技术</a>  </li>
+<li><a href="https://github.com/aozhimin/iOS-Monitor-Resources">iOS-Monitor-Resources</a> </li>
+<li><a href="https://juejin.im/post/5b1602906fb9a01e3542f08c">iOS 流量监控分析</a></li>
+<li><a href="http://ddrccw.github.io/2017/12/30/reverse-xcode-with-lldb-and-hopper-disassembler">小试Xcode逆向：app内存监控原理初探</a></li>
+<li><a href="http://apmcon.cn/2016/index.html#yjsl">APMCon-2016演讲实录</a>  </li>
+<li><a href="https://mp.weixin.qq.com/s/Vq0TDiLbexxBlqlf_lilnQ">360移动端性能监控实践QDAS-APM（iOS篇）</a>  </li>
+<li><a href="https://tech.meituan.com/2016/12/19/hertz.html">移动端性能监控方案Hertz</a></li>
+</ul>
+<h4 id="调试-amp-Crash"><a href="#调试-amp-Crash" class="headerlink" title="调试 &amp; Crash"></a>调试 &amp; Crash</h4><ul>
+<li><a href="https://github.com/aozhimin/iOS-Debug-Hacks">iOS 项目开发过程中用到的高级调试技巧，涉及三方库动态调试、静态分析和反编译等领域</a></li>
+<li><a href="https://developer.apple.com/library/content/technotes/tn2151/_index.html">Understanding and Analyzing Application Crash Reports</a> </li>
+</ul>
+<h4 id="相关开源库"><a href="#相关开源库" class="headerlink" title="相关开源库"></a>相关开源库</h4><h5 id="网络"><a href="#网络" class="headerlink" title="网络"></a>网络</h5><ul>
+<li><a href="https://github.com/CNSRE/HTTPDNSLib-for-iOS">HTTPDNSLib-for-iOS</a></li>
+<li><a href="https://github.com/CNSRE/HTTPDNSLib">HTTPDNSLib-for-Andorod</a></li>
+<li><a href="https://github.com/coderyi/NetworkEye/blob/master/README_Chinese.md">NetworkEye</a> </li>
+</ul>
+<h5 id="内存"><a href="#内存" class="headerlink" title="内存"></a>内存</h5><ul>
+<li><a href="https://github.com/facebook/FBMemoryProfiler">FBMemoryProfiler</a></li>
+<li><a href="https://github.com/Split82/iOSMemoryBudgetTest">iOS Memory Budget Test</a></li>
+</ul>
+<h5 id="卡顿"><a href="#卡顿" class="headerlink" title="卡顿"></a>卡顿</h5><ul>
+<li><a href="https://github.com/suifengqjn/PerformanceMonitor">PerformanceMonitor-Runloop</a></li>
+<li><a href="https://github.com/featuretower/GYMonitor">GYMonitor-FPS</a></li>
+</ul>
+<h5 id="瘦身"><a href="#瘦身" class="headerlink" title="瘦身"></a>瘦身</h5><ul>
+<li><a href="https://github.com/tinymind/LSUnusedResources">LSUnusedResources</a></li>
+<li><a href="https://github.com/huanxsd/LinkMap">LinkMap</a></li>
+</ul>
+<h4 id="APM-1"><a href="#APM-1" class="headerlink" title="APM"></a>APM</h4><ul>
+<li><a href="https://github.com/iOS-APM/iOS-System-Services">iOS-System-Services</a></li>
+<li><a href="https://github.com/iOS-APM/SystemMonitor">System Monitor</a></li>
+<li><a href="https://github.com/ArmsZhou/PerformanceTestingHelper">PerformanceTestingHelper</a></li>
+<li><a href="https://github.com/Tencent/GT">GT</a> </li>
+<li><a href="https://github.com/zixun/GodEye">GodEye</a></li>
+<li><a href="https://github.com/Qihoo360/ArgusAPM">ArgusAPM</a></li>
+<li><a href="https://github.com/everettjf/AppleTrace">AppleTrace</a></li>
+<li><a href="https://github.com/Tencent/matrix">matrix</a></li>
+<li><a href="https://github.com/meitu/MTHawkeye">MTHawkeye</a></li>
+</ul>
+<h3 id="六、效果图"><a href="#六、效果图" class="headerlink" title="六、效果图"></a>六、效果图</h3><p>（无）</p>
+<h3 id="七、备注"><a href="#七、备注" class="headerlink" title="七、备注"></a>七、备注</h3><p>TODO:: 性能优化及监测工具整理</p>
+<h3 id="八、变更记录"><a href="#八、变更记录" class="headerlink" title="八、变更记录"></a>八、变更记录</h3><table>
+<thead>
+<tr>
+<th align="center">序号</th>
+<th align="center">录入时间</th>
+<th align="center">录入人</th>
+<th align="center">备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">1</td>
+<td align="center">2018-08-20</td>
+<td align="center"><a href="https://yujiuqie.github.io/">Alfred Jiang</a></td>
+<td align="center">-</td>
+</tr>
+</tbody></table>
+</div><div class="article-tags size-small mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tags/%E4%B8%93%E9%A2%98/">专题</a><a class="link-muted mr-2" rel="tag" href="/tags/%E6%80%A7%E8%83%BD/">性能</a><a class="link-muted mr-2" rel="tag" href="/tags/%E4%BC%98%E5%8C%96/">优化</a><a class="link-muted mr-2" rel="tag" href="/tags/%E7%9B%91%E6%B5%8B/">监测</a></div><!--!--></article></div><!--!--><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/write_20200808_0001.html"><i class="level-item fas fa-chevron-left"></i><span class="level-item">阅有所思-道法术器</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/Note_00261_20200818.html"><span class="level-item">WKWebView - 秒开实践</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><div class="card"><div class="card-content"><h3 class="title is-5">Comments</h3><div id="lv-container" data-id="city" data-uid="MTAyMC81MTMxNy8yNzc5OA=="><script>(function(d, s) {
+            var j, e = d.getElementsByTagName(s)[0];
+
+            if (typeof LivereTower === 'function') { return; }
+
+            j = d.createElement(s);
+            j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+            j.async = true;
+
+            e.parentNode.insertBefore(j, e);
+        })(document, 'script');</script><noscript>Please activate JavaScript for write a comment in LiveRe</noscript></div></div></div></div><div class="column column-left is-4-tablet is-3-desktop is-3-widescreen  order-1"><div class="card widget"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar" src="/img/avatar.png" alt="Alfred Jiang"></figure><p class="title is-size-4 is-block line-height-inherit">Alfred Jiang</p><p class="is-size-6 is-block">The world we see with our senses is very different than the world we see through our essence.</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>Shanghai,China</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">Posts</p><a href="/archives"><p class="title">266</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">Categories</p><a href="/categories"><p class="title">5</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">Tags</p><a href="/tags"><p class="title">707</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://github.com/yujiuqie" target="_blank" rel="noopener">Follow</a></div><div class="level is-mobile"><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Github" href="https://github.com/yujiuqie"><i class="fab fa-github"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Facebook" href="https://facebook.com"><i class="fab fa-facebook"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Twitter" href="https://twitter.com"><i class="fab fa-twitter"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Dribbble" href="https://dribbble.com"><i class="fab fa-dribbble"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="RSS" href="/"><i class="fas fa-rss"></i></a></div></div></div><!--!--><div class="card widget"><div class="card-content"><div class="menu"><h3 class="menu-label">Links</h3><ul class="menu-list"><li><a class="level is-mobile is-mobile" href="https://hexo.io" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Hexo</span></span><span class="level-right"><span class="level-item tag">hexo.io</span></span></a></li><li><a class="level is-mobile is-mobile" href="https://bulma.io" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Bulma</span></span><span class="level-right"><span class="level-item tag">bulma.io</span></span></a></li></ul></div></div></div><div class="card widget"><div class="card-content"><div class="menu"><h3 class="menu-label">Categories</h3><ul class="menu-list"><li><a class="level is-mobile is-marginless" href="/categories/Catalog/"><span class="level-start"><span class="level-item">Catalog</span></span><span class="level-end"><span class="level-item tag">1</span></span></a><ul class="mr-0"><li><a class="level is-mobile is-marginless" href="/categories/Catalog/iOSNotebook/"><span class="level-start"><span class="level-item">iOSNotebook</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></li><li><a class="level is-mobile is-marginless" href="/categories/iOSNotebook/"><span class="level-start"><span class="level-item">iOSNotebook</span></span><span class="level-end"><span class="level-item tag">262</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/%E9%98%85%E6%9C%89%E6%89%80%E6%80%9D-R-T/"><span class="level-start"><span class="level-item">阅有所思(R&amp;T)</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/%E9%98%85%E8%AF%BB%E9%9A%8F%E8%AE%B0-R-W/"><span class="level-start"><span class="level-item">阅读随记(R&amp;W)</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li></ul></div></div></div><div class="card widget"><div class="card-content"><h3 class="menu-label">Recent</h3><article class="media"><div class="media-content size-small"><p><time dateTime="9999-01-01T00:00:00.000Z">9999-01-01</time></p><p class="title is-6"><a class="link-muted" href="/Note_00000_20150625.html">iOSNotebook</a></p><p class="is-uppercase"><a class="link-muted" href="/categories/Catalog/">Catalog</a> / <a class="link-muted" href="/categories/Catalog/iOSNotebook/">iOSNotebook</a></p></div></article><article class="media"><div class="media-content size-small"><p><time dateTime="2020-08-20T06:53:56.849Z">2020-08-20</time></p><p class="title is-6"><a class="link-muted" href="/Note_00174_20160423.html">数据库 - 使用 SQLCipher 进行数据库加密存储</a></p><p class="is-uppercase"><a class="link-muted" href="/categories/iOSNotebook/">iOSNotebook</a></p></div></article><article class="media"><div class="media-content size-small"><p><time dateTime="2020-08-20T06:53:56.849Z">2020-08-20</time></p><p class="title is-6"><a class="link-muted" href="/Note_00175_20160425.html">测试 - 异步函数的单元测试</a></p><p class="is-uppercase"><a class="link-muted" href="/categories/iOSNotebook/">iOSNotebook</a></p></div></article><article class="media"><div class="media-content size-small"><p><time dateTime="2020-08-20T06:53:56.849Z">2020-08-20</time></p><p class="title is-6"><a class="link-muted" href="/Note_00176_20160426.html">Xcode - 在 Xcode 里添加和使用 Debug 宏定义</a></p><p class="is-uppercase"><a class="link-muted" href="/categories/iOSNotebook/">iOSNotebook</a></p></div></article><article class="media"><div class="media-content size-small"><p><time dateTime="2020-08-20T06:53:56.849Z">2020-08-20</time></p><p class="title is-6"><a class="link-muted" href="/Note_00177_20160504.html">KVO - 使用 KVO 更新 UITableViewCell 显示</a></p><p class="is-uppercase"><a class="link-muted" href="/categories/iOSNotebook/">iOSNotebook</a></p></div></article></div></div><div class="card widget"><div class="card-content"><div class="menu"><h3 class="menu-label">Archives</h3><ul class="menu-list"><li><a class="level is-mobile is-marginless" href="/archives/9999/01/"><span class="level-start"><span class="level-item">January 9999</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2020/08/"><span class="level-start"><span class="level-item">August 2020</span></span><span class="level-end"><span class="level-item tag">219</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2018/08/"><span class="level-start"><span class="level-item">August 2018</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2016/02/"><span class="level-start"><span class="level-item">February 2016</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2015/12/"><span class="level-start"><span class="level-item">December 2015</span></span><span class="level-end"><span class="level-item tag">10</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2015/10/"><span class="level-start"><span class="level-item">October 2015</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2015/09/"><span class="level-start"><span class="level-item">September 2015</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2015/05/"><span class="level-start"><span class="level-item">May 2015</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2015/04/"><span class="level-start"><span class="level-item">April 2015</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2015/03/"><span class="level-start"><span class="level-item">March 2015</span></span><span class="level-end"><span class="level-item tag">23</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2015/02/"><span class="level-start"><span class="level-item">February 2015</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li></ul></div></div></div><div class="card widget"><div class="card-content"><div class="menu"><h3 class="menu-label">Subscribe to Updates</h3><form action="https://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open(&#039;https://feedburner.google.com/fb/a/mailverify?uri=&#039;,&#039;popupwindow&#039;,&#039;scrollbars=yes,width=550,height=520&#039;);return true"><input type="hidden" value="" name="uri"><input type="hidden" name="loc" value="en_US"><div class="field has-addons"><div class="control has-icons-left is-expanded"><input class="input" name="email" type="email" placeholder="Email"><span class="icon is-small is-left"><i class="fas fa-envelope"></i></span></div><div class="control"><input class="button is-primary" type="submit" value="Subscribe"></div></div></form></div></div></div></div><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/img/logo.svg" alt="Alfred" height="28"></a><p class="size-small"><span>&copy; 2020 Alfred Jiang</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script>moment.locale("en");</script><script>var IcarusThemeSettings = {
+            site: {
+                url: 'http://yoursite.com',
+                external_link: {"enable":true,"exclude":[]}
+            },
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script src="/js/animation.js"></script><a id="back-to-top" title="Back to Top" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script src="/js/back_to_top.js" defer></script><!--!--><script src="https://s9.cnzz.com/z_stat.php?id=1279155120&amp;web_id=1279155120" async></script><script src="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/js/lightgallery.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><!--!--><!--!--><script src="/js/main.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="Type something..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/content.json"}, {"hint":"Type something...","untitled":"(Untitled)","posts":"Posts","pages":"Pages","categories":"Categories","tags":"Tags"});
+        });</script></body></html>
