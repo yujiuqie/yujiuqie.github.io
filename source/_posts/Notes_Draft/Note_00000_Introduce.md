@@ -30,10 +30,10 @@ categories:
 
 | 序号 | 名称 | 简介 |
 |:--------:|--------|--------|
-| 1 | [Github - iOS 备忘](http://github.ibireme.com/github/list/ios/#) | 收录了 Github 上大量的 iOS 第三方开源代码 |
+| 1 | [GitHub - iOS 备忘](http://github.ibireme.com/github/list/ios/#) | 收录了 Github 上大量的 iOS 第三方开源代码 |
 | 2 | [Skyfox - iOS 开发学习路线图](http://ios.skyfox.org/route.html) | iOS 开发学习路线图参考 |
-| 3 | [Github - Awesome-iOS](https://github.com/vsouza/awesome-ios) |  Awesome 系列之 iOS |
-| 4 | [Github - iOS资源大全中文版](https://github.com/jobbole/awesome-ios-cn) | Awesome 系列之 iOS 中文版 |
+| 3 | [GitHub - Awesome-iOS](https://github.com/vsouza/awesome-ios) |  Awesome 系列之 iOS |
+| 4 | [GitHub - iOS资源大全中文版](https://github.com/jobbole/awesome-ios-cn) | Awesome 系列之 iOS 中文版 |
 | 5 | [简书 - iOS 探索](https://juejin.im/post/6844904025985384462) | iOS 各类实现的底层介绍 |
 | 6 | [简书 - iOS 源码分析](https://juejin.im/post/6844904038467633160) | iOS 源码分析介绍 |
 
